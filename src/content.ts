@@ -61,7 +61,7 @@ export const testingSteps = [
 export const galleryScreenshots = [
   {
     id: "overview",
-    title: "Dashboard Overview",
+    title: "Overview",
     category: "Monitoring",
     caption: "Live workspace health, severity status, decision output, and historical monitoring trends.",
     image: "/images/dashboard-overview.png",
@@ -69,7 +69,7 @@ export const galleryScreenshots = [
   },
   {
     id: "report",
-    title: "Drift & Decision Trace",
+    title: "Full Report",
     category: "Reports",
     caption: "Full report view detailing drift rates, feature divergence charts, and transparent decision rule traces.",
     image: "/images/dashboard-report.png",
@@ -77,7 +77,7 @@ export const galleryScreenshots = [
   },
   {
     id: "features",
-    title: "Feature-Level Metrics",
+    title: "Feature Metrics",
     category: "Reports",
     caption: "Granular feature diagnostics showing statistical drift score, contributing factors, missingness, and drift status.",
     image: "/images/dashboard-features.png",
@@ -85,7 +85,7 @@ export const galleryScreenshots = [
   },
   {
     id: "quality",
-    title: "Data Quality & Performance",
+    title: "Data Quality",
     category: "Metrics",
     caption: "Data-quality findings, percentile outlier warnings, and classification performance diagnostics.",
     image: "/images/dashboard-quality.png",
@@ -108,12 +108,28 @@ export const galleryScreenshots = [
     alt: "DriftWatch Models and projects workspace management screen",
   },
   {
+    id: "retraining",
+    title: "Retraining",
+    category: "Actions",
+    caption: "Human-approved retraining recommendations, trigger requests from latest runs, and track approval history.",
+    image: "/images/dashboard-retraining.png",
+    alt: "DriftWatch Retraining approval screen",
+  },
+  {
     id: "audit",
-    title: "Organization Audit Log",
+    title: "Audit Log",
     category: "Governance",
-    caption: "Complete audit history tracking user actions, login events, and retraining approval workflows.",
+    caption: "Complete organization audit history tracking user actions, login events, and retraining workflows.",
     image: "/images/dashboard-audit.png",
     alt: "DriftWatch Organization Audit Log screen",
+  },
+  {
+    id: "multimodal",
+    title: "Multimodal",
+    category: "Extensibility",
+    caption: "Multimodal monitoring modules including text, image embeddings, ranking, and LLM/RAG signal evaluation.",
+    image: "/images/dashboard-multimodal.png",
+    alt: "DriftWatch Multimodal monitoring panel",
   },
 ];
 
