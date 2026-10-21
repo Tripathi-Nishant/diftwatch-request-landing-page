@@ -1,27 +1,50 @@
 // src/components/Steps.tsx
+import { testingSteps } from "../content";
+
 export default function Steps() {
-  const steps = [
-    { title: "Install", description: "Add DriftWatch to your project with a single pip install (or npm) command." },
-    { title: "Instrument", description: "Wrap your model inference calls with the provided monitor utilities." },
-    { title: "Monitor", description: "Dashboard alerts you when drift exceeds thresholds, with impact analysis per feature." },
-    { title: "Iterate", description: "Use the insights to retrain or adjust your model before performance drops." },
-  ];
   return (
-    <div className="max-w-4xl mx-auto px-4">
-      <h2 className="text-3xl font-bold text-center mb-8 text-primary">How Beta Testing Works</h2>
-      <ol className="space-y-6">
-        {steps.map((s, i) => (
-          <li key={i} className="flex items-start space-x-4">
-            <div className="flex-shrink-0 w-10 h-10 flex items-center justify-center bg-primary text-white rounded-full">
-              {i + 1}
-            </div>
+    <div className="max-w-5xl mx-auto px-4">
+      <div className="text-center max-w-2xl mx-auto mb-12">
+        <h2 className="text-3xl font-bold text-textPrimary tracking-tight mb-3">
+          How Beta Testing Works
+        </h2>
+        <p className="text-textSecondary">
+          A straightforward four-step process from access request to running drift analyses on your models.
+        </p>
+      </div>
+
+      <div className="grid sm:grid-cols-2 lg:grid-cols-4 gap-6">
+        {testingSteps.map((s, i) => (
+          <div
+            key={i}
+            className="bg-white border border-border rounded-xl p-6 shadow-sm hover:border-primary/40 hover:shadow-md transition-all flex flex-col justify-between"
+          >
             <div>
-              <h3 className="text-xl font-medium text-primary">{s.title}</h3>
-              <p className="text-gray-600">{s.description}</p>
+              <div className="flex items-center justify-between mb-4">
+                <span className="text-xs font-bold text-primary bg-primaryTint px-2.5 py-1 rounded-md">
+                  Step {s.step}
+                </span>
+                <span className="text-xl font-bold text-gray-300 font-mono">
+                  0{i + 1}
+                </span>
+              </div>
+              <h3 className="text-lg font-semibold text-textPrimary mb-2">
+                {s.title}
+              </h3>
+              <p className="text-sm text-textSecondary leading-relaxed">
+                {s.description}
+              </p>
             </div>
-          </li>
+
+            <div className="mt-6 pt-4 border-t border-gray-100 flex items-center text-xs text-textSecondary font-medium">
+              {i === 0 && "Takes ~1 minute"}
+              {i === 1 && "Personalized invite"}
+              {i === 2 && "Interactive dashboard"}
+              {i === 3 && "Direct developer access"}
+            </div>
+          </div>
         ))}
-      </ol>
+      </div>
     </div>
   );
 }

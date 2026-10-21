@@ -1,6 +1,7 @@
 // src/app/page.tsx
 import Navbar from "../components/Navbar";
 import Hero from "../components/Hero";
+import DashboardPreview from "../components/DashboardPreview";
 import FeatureCards from "../components/FeatureCards";
 import Steps from "../components/Steps";
 import BetaScope from "../components/BetaScope";
@@ -11,29 +12,49 @@ import Footer from "../components/Footer";
 
 export default function HomePage() {
   return (
-    <main className="bg-background text-primary">
+    <main className="bg-background text-textPrimary min-h-screen">
       <Navbar />
-      <section className="pt-24" id="hero">
+
+      {/* Hero section */}
+      <section className="pt-32 pb-16" id="hero">
         <Hero />
       </section>
-      <section className="py-16" id="features">
+
+      {/* Authentic Dashboard Gallery */}
+      <section className="py-16 bg-white border-y border-border" id="dashboard-preview">
+        <DashboardPreview />
+      </section>
+
+      {/* Core Features */}
+      <section className="py-20" id="features">
         <FeatureCards />
       </section>
-      <section className="py-16 bg-gray-50" id="how-it-works">
+
+      {/* 4-Step Testing Journey */}
+      <section className="py-20 bg-gray-50 border-y border-border" id="how-it-works">
         <Steps />
       </section>
-      <section className="py-16" id="beta-scope">
+
+      {/* Beta Scope & Roadmap (Available Now vs Planned) */}
+      <section className="py-20" id="beta-scope">
         <BetaScope />
       </section>
-      <section className="py-16 bg-gray-50" id="audience">
+
+      {/* Target Audience */}
+      <section className="py-20 bg-gray-50 border-y border-border" id="audience">
         <Audience />
       </section>
-      <section className="py-16" id="get-started">
+
+      {/* Request Beta Access & Contact */}
+      <section className="py-20" id="get-started">
         <RequestContact />
       </section>
-      <section className="py-16 bg-gray-50" id="faq">
+
+      {/* FAQ */}
+      <section className="py-20 bg-gray-50 border-t border-border" id="faq">
         <FAQ />
       </section>
+
       <Footer />
     </main>
   );
